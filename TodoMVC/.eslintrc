@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:cypress/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "react-hooks/exhaustive-deps": "off",
+    "import/order": [
+      // Import Sort
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          [
+            "parent",
+            "sibling"
+          ],
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "newlines-between": "always"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "paths": [
+          "src"
+        ]
+      }
+    }
+  }
+}
