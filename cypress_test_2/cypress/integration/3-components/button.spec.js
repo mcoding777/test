@@ -1,6 +1,6 @@
 describe('메인 테스트', () => {
     it('방문하다', () => {
-        cy.visit('http://localhost:3000');
+        cy.visit('');
     });
 
     it("count is 버튼 클릭!", () => {
