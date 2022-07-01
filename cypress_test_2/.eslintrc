@@ -1,0 +1,7 @@
+{
+    "extends": ["react-app", "react-app/jest", "plugin:cypress/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+      "react-hooks/exhaustive-deps": "off"
+    }
+  }
